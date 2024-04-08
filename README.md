@@ -25,6 +25,15 @@
   - `make report.html` will generate the final report
   - `make clean` will clean all outputs
 
+## Instructions on how to synchronize packages
+1. To check if you have the `renv` package installed.
+	- Run `"renv" %in% row.names(installed.packages())`
+	- If the above command returns `FALSE`, install the `renv` package using `install.packages('renv')`
+	
+2. In an R console, use `setwd` and `getwd` to confirm that the current working directory in the R console is the project directory.
+
+3. Use `make install` rule for restoring the package environment for the project.
+
 
 
 
