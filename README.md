@@ -44,5 +44,6 @@
 ## Automated Report Construction using Make Rules
 1. Use `make final_project_image` rule which runs `docker build` to build the docker image for this project
 
-2. For Mac users, use `make final_report/final_report.html` rule directly which executes `docker run` to automate the final report building process; for Windows users, modify the `make final_report/final_report.html` rule by using `"/$$(pwd)"/final_report:/project/final_report` instead to specify the path and the run the rule to automate the final report building process
+2. For Mac users, use `make final_report/final_report.html` rule directly, of which executes `docker run` to automate the final report building process; 
+for Windows users, modify the `make final_report/final_report.html` rule by using `"/$$(pwd)"/final_report:/project/final_report` instead to specify the mounting path, and then run the rule to automate the final report building process
 
