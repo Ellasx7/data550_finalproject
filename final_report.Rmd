@@ -19,7 +19,8 @@ This data set is originally from the National Institute of Diabetes and Digestiv
 
 ## Data Loading
 ```{r Data Loading}
-diabetes <- read.csv("~/Desktop/DATA550/final_proj/data/diabetes.csv")
+diabetes <- read.csv(
+  file = here::here("data/diabetes.csv"))
 kable(diabetes[1:5,1:9],
       caption = "Predict Diabetes")
 ```
