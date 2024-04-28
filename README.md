@@ -32,9 +32,9 @@
 5.  `renv` associated files:
 
 -   `renv.lock` stores the packages information associated specifically with this project
--   `.Rprofile` will load the project-specific packages
--   `activate.R` is a script file to activate the project-specific environment
--   `setting.json` is a configuration file to store project-specific settings and preferences
+-   `.Rprofile` reads R code from `renv/activate.R` file
+-   `renv/activate.R` is a script file to activate the project-specific environment
+-   `renv/setting.json` is a configuration file to store project-specific settings and preferences
 
 6.  `Dockerfile` specifies the environment and configuration needed to build the docker image for automated report construction
 
@@ -53,7 +53,7 @@
 
 1.  Use `make final_project_image` rule which runs `docker build` to build the docker image for this project
 
-2.  Here is the link to the Docker image as a public repository on Dockerhub: https://hub.docker.com/repository/docker/ellaxshen7/final_project/general
+    -   Here is the link to the Docker image as a public repository on Dockerhub: https://hub.docker.com/repository/docker/ellaxshen7/final_project/general
 
-3. For Mac users, use `make report/final_report.html` rule directly, of which executes `docker run` to automate the final report building process;<br />
-For Windows users, modify the `make report/final_report.html` rule by using `"/$$(pwd)"/report:/project/report` instead to specify the mounting path, and then run the rule to automate the final report building process
+2. For Mac users, use `make report/final_report.html` rule directly, of which executes `docker run` to automate the final report building process;<br />
+for Windows users, modify the `make report/final_report.html` rule by using `"/$$(pwd)"/report:/project/report` instead to specify the mounting path, and then run the rule to automate the final report building process
