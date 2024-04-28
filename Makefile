@@ -1,6 +1,6 @@
 ### Project-associated Rules
 
-report.html: final_report.Rmd code/02_render_report.R .outputs
+final_report.html: final_report.Rmd code/02_render_report.R .outputs
 	Rscript code/02_render_report.R
 
 .outputs: code/01_make_output.R data/diabetes.csv

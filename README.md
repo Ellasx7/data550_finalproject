@@ -22,10 +22,10 @@
 
 4.  `Makefile` contains rules for building the report
 
+-   `make final_report.html` will generate the final report
 -   `make .outputs` will generate the `.rds` and `.png` files needed to compile the report
--   `make report.html` will generate the final report
 -   `make clean` will clean all outputs
--   `make install` will synchronize packages with the lockfile
+-   `make install` will synchronize project-specific packages using the lockfile
 -   `make final_project_image` will build the docker image
 -   `make report/final_report.html` will automatically generate the final report for the project
 
