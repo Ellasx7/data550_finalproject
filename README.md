@@ -27,7 +27,7 @@
 -   `make clean` will clean all outputs
 -   `make install` will synchronize packages with the lockfile
 -   `make final_project_image` will build the docker image
--   `make final_report/final_report.html` will automatically generate the final report for the project
+-   `make report/final_report.html` will automatically generate the final report for the project
 
 5.  `renv` associated files:
 
