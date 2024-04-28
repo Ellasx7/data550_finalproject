@@ -38,7 +38,7 @@
 
 6.  `Dockerfile` specifies the environment and configuration needed to build the docker image for automated report construction
 
-## Instructions on How to Synchronize Packages
+## Instructions for Packages Synchronization
 
 1.  To check if you have the `renv` package installed
 
@@ -49,11 +49,11 @@
 
 3.  Use `make install` rule for restoring the package environment for the project
 
-## Automated Report Construction using Make Rules
+## Instructions for Automated Report Construction with Docker
 
 1.  Use `make final_project_image` rule which runs `docker build` to build the docker image for this project
 
 2.  Here is the link to the Docker image as a public repository on Dockerhub: https://hub.docker.com/repository/docker/ellaxshen7/final_project/general
 
-3. For Mac users, use `make final_report/final_report.html` rule directly, of which executes `docker run` to automate the final report building process;<br />
+3. For Mac users, use `make report/final_report.html` rule directly, of which executes `docker run` to automate the final report building process;<br />
 For Windows users, modify the `make report/final_report.html` rule by using `"/$$(pwd)"/report:/project/report` instead to specify the mounting path, and then run the rule to automate the final report building process
