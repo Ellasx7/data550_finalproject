@@ -49,7 +49,7 @@
 
 3.  Use `make install` rule for restoring the package environment for the project
 
-## Instructions for Docker Image building
+## Instructions for Building Docker Image 
 
 1.  Use `make final_project_image` rule which runs `docker build` to build your own docker image for this project
 
