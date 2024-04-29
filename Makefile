@@ -15,7 +15,7 @@ install:
 	Rscript -e "renv::restore()"
 	
 
-### Docker Rules
+### Docker-associated Rules
 
 PROJECTFILES = final_report.Rmd code/01_make_output.R code/02_render_report.R data/diabetes.csv Makefile
 RENVFILES = renv.lock renv/activate.R renv/settings.json
@@ -28,6 +28,6 @@ final_project_image: $(PROJECTFILES) $(RENVFILES)
 # rule to mount directories and build report automatically in container
 # syntax is speficified for mac users, windows users require a additional '/' at the beginning of the $$(pwd)
 report/final_report.html:
-	docker run -v "$$(pwd)"/report:/project/report final_project_image
+	docker run -v "$$(pwd)"/report:/project/report ellaxshen7/final_project
 
 
