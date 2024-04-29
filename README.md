@@ -49,11 +49,13 @@
 
 3.  Use `make install` rule for restoring the package environment for the project
 
+## Instructions for Docker Image building
+
+1.  Use `make final_project_image` rule which runs `docker build` to build your own docker image for this project
+
 ## Instructions for Automated Report Construction with Docker
 
-1.  Use `make final_project_image` rule which runs `docker build` to build the docker image for this project
+1. For Mac users, use `make report/final_report.html` rule directly, of which executes `docker run` to automate the final report building process;<br />
+for Windows users, modify the `make report/final_report.html` rule by using `"/$$(pwd)"/report:/project/report` instead to specify the mounting path, and then run the rule to automate the final report building process
 
     -   Here is the link to the Docker image as a public repository on Dockerhub: https://hub.docker.com/repository/docker/ellaxshen7/final_project/general
-
-2. For Mac users, use `make report/final_report.html` rule directly, of which executes `docker run` to automate the final report building process;<br />
-for Windows users, modify the `make report/final_report.html` rule by using `"/$$(pwd)"/report:/project/report` instead to specify the mounting path, and then run the rule to automate the final report building process
